@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <div>
+            <nav class="navbar navbar-light bg-light">
+                <form class="form-inline">
+                  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+              </nav>
+        </div>
+        <div>
+            <table  className='table'>
+              <thead className='thead-dark'>
+                <tr>
+                  <th>Código</th>
+                  <th>Descripción</th>
+                  <th>Precio</th>
+                </tr>
+              </thead>
+              <tbody>
+                {this.state.productos.map((prod) => {
+                  return (
+                    <tr key={prod.codigo}>
+                      <td>{prod.id}</td>
+                      <td>{prod.nombre}</td>
+                      <td>{prod.precio}</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+    </div>
+</body>
+</html>
